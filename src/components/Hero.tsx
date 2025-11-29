@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Gradient background */}
@@ -47,6 +50,7 @@ export const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-border hover:bg-muted h-12 px-8 text-lg"
+              onClick={() => navigate('/onboarding')}
             >
               Watch Demo
             </Button>

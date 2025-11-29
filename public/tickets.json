@@ -1,0 +1,163 @@
+{
+  "version": "1.0",
+  "updatedAt": "2025-11-29T12:00:00Z",
+  "tickets": [
+    {
+      "id": "T1",
+      "title": "Workstation & Environment Setup (Major Task)",
+      "summary": "Set up the full development environment required for Big Data Engineering work.",
+      "details": "Request Hardware & Initial Access: Go to IT Service Portal, submit 'New Engineer Hardware Request' form, select laptop type and accessories. Install Base Developer Tools: Python 3.11+, Java 17, Docker Desktop, VS Code/IntelliJ, Git & SSH keys. Configure Company VPN: Download from IT Portal, install, login with SSO, validate connectivity.",
+      "status": "open",
+      "priority": "high",
+      "phase": "week-1",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "setup", "environment"],
+      "acceptanceCriteria": [
+        "Laptop and accessories received",
+        "All developer tools installed and working",
+        "VPN connection successful"
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Big Data Tools Setup (Major Task)",
+      "summary": "Install and configure all core tools: Spark, Hadoop, Airflow, and internal CLIs.",
+      "details": "Install Apache Spark: Download from internal artifact repo, configure SPARK_HOME and PATH, verify with spark-shell. Install Hadoop Client: Download CLI package, set HADOOP_HOME, validate with hdfs dfs -ls /. Install Airflow Local Runner: pip install apache-airflow, airflow db init, start webserver.",
+      "status": "open",
+      "priority": "high",
+      "phase": "week-1",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "big-data", "tools"],
+      "acceptanceCriteria": [
+        "Spark shell runs successfully",
+        "Hadoop commands work",
+        "Airflow UI accessible locally"
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Get Access to Data Infrastructure",
+      "summary": "Obtain all necessary access rights to cloud resources, data lake, clusters, and monitoring tools.",
+      "details": "Request Cloud Access: Go to IAM Portal, apply for 'Big Data Engineer' role, select cloud provider, wait for approval. Request Data Lake Permissions: Submit ticket to Data Governance, specify S3/HDFS paths, wait for confirmation.",
+      "status": "open",
+      "priority": "high",
+      "phase": "week-1",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "access", "permissions"],
+      "acceptanceCriteria": [
+        "Cloud console access granted",
+        "Data lake read/write permissions confirmed"
+      ]
+    },
+    {
+      "id": "T4",
+      "title": "Install Core Python Packages",
+      "summary": "Install required Python libraries for data processing and analytics.",
+      "details": "Install PySpark: pip install pyspark, verify import. Install Common Data Libraries: pandas, numpy, pyarrow. Configure Virtual Environment: create venv, activate, export requirements.txt.",
+      "status": "open",
+      "priority": "medium",
+      "phase": "week-1",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "python", "dependencies"],
+      "acceptanceCriteria": [
+        "All Python packages installed",
+        "Virtual environment configured",
+        "Import statements work without errors"
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Setup Company Git & Repo Structure",
+      "summary": "Clone repositories, configure Git, and learn branching rules.",
+      "details": "Configure Git Credentials: Generate SSH key, add to GitLab/GitHub, verify access. Clone Primary Repositories: ETL pipeline repo, Data Lake schemas repo, shared utils repo. Review Branching Strategy: Read Git Flow docs, understand naming conventions and release branches.",
+      "status": "open",
+      "priority": "high",
+      "phase": "week-2",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "git", "repositories"],
+      "acceptanceCriteria": [
+        "SSH keys configured and working",
+        "All main repositories cloned",
+        "Branching strategy documented"
+      ]
+    },
+    {
+      "id": "T6",
+      "title": "First Data Exploration Task",
+      "summary": "Run simple queries on the data lake to explore datasets.",
+      "details": "Access Data Lake via Spark: Start PySpark session, load sample dataset from S3/HDFS, run .show() and .describe(), write notes in onboarding doc.",
+      "status": "open",
+      "priority": "medium",
+      "phase": "week-2",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "data-exploration", "spark"],
+      "acceptanceCriteria": [
+        "Successfully loaded and queried sample dataset",
+        "Documentation created with findings"
+      ]
+    },
+    {
+      "id": "T7",
+      "title": "First Coding Task: Process a Small Dataset",
+      "summary": "Write your first data processing script using PySpark.",
+      "details": "Create Basic ETL Script: Read raw CSV, clean null values, convert data types, write output as Parquet. Run Job Locally: Use spark-submit, check logs, fix errors.",
+      "status": "open",
+      "priority": "medium",
+      "phase": "week-2",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "etl", "coding"],
+      "acceptanceCriteria": [
+        "ETL script written and tested",
+        "Job runs without errors",
+        "Output Parquet file validated"
+      ]
+    },
+    {
+      "id": "T8",
+      "title": "Understand Data Models & Schemas",
+      "summary": "Learn how data is structured and validated in the company.",
+      "details": "Review Schema Repo: Open documentation, study naming rules, review versioning strategy. Validate Schema with Spark: Load schema file, apply validation to sample dataset, document mismatches.",
+      "status": "open",
+      "priority": "medium",
+      "phase": "week-3",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "schemas", "data-modeling"],
+      "acceptanceCriteria": [
+        "Schema documentation reviewed",
+        "Schema validation performed successfully"
+      ]
+    },
+    {
+      "id": "T9",
+      "title": "Deploy First Airflow DAG",
+      "summary": "Implement and deploy an example DAG to internal Airflow.",
+      "details": "Create DAG File: Define schedule, add extraction and transformation tasks, test locally. Deploy DAG: Push to Airflow Git repo, wait for CI/CD, verify in Airflow UI.",
+      "status": "open",
+      "priority": "high",
+      "phase": "week-3",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "airflow", "orchestration"],
+      "acceptanceCriteria": [
+        "DAG created and tested locally",
+        "DAG deployed and visible in Airflow UI",
+        "First successful DAG run"
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "Monitoring & Logging Basics",
+      "summary": "Learn how to debug jobs using logs, monitors, and dashboards.",
+      "details": "Explore Logging Tools: Open Kibana/Grafana dashboards, search for Spark job logs, bookmark key dashboards. Trigger Test Job: Run small job on dev cluster, identify logs in monitoring system, document common error patterns.",
+      "status": "open",
+      "priority": "medium",
+      "phase": "week-4",
+      "createdAt": "2025-11-29T09:00:00Z",
+      "tags": ["onboarding", "monitoring", "debugging"],
+      "acceptanceCriteria": [
+        "Monitoring dashboards bookmarked",
+        "Test job logs found and analyzed",
+        "Error patterns documented"
+      ]
+    }
+  ]
+}
